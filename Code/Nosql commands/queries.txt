@@ -1,0 +1,37 @@
+use blooddonation;
+db.users.insertOne({userid:"meher",password:"meher",emailid:"meher@gmail.com",bloodgroup:"A+",usertype:"admin"});
+db.users.insertOne({userid:"donor1",password:"donor1",emailid:"donor1@gmail.com",bloodgroup:"A+",usertype:"donor"});
+db.users.insertOne({userid:"donor2",password:"donor2",emailid:"donor2@gmail.com",bloodgroup:"A-",usertype:"donor"});
+db.users.insertOne({userid:"donor3",password:"donor3",emailid:"donor3@gmail.com",bloodgroup:"B+",usertype:"donor"});
+db.users.insertOne({userid:"donor4",password:"donor4",emailid:"donor4@gmail.com",bloodgroup:"B-",usertype:"donor"});
+db.users.insertOne({userid:"donor5",password:"donor5",emailid:"donor5@gmail.com",bloodgroup:"O+",usertype:"donor"});
+db.users.insertOne({userid:"donor6",password:"donor6",emailid:"donor6@gmail.com",bloodgroup:"O-",usertype:"donor"});
+db.users.insertOne({userid:"karthik",password:"karthik",emailid:"karthik@gmail.com",bloodgroup:"AB+",usertype:"doctor"});
+db.users.insertOne({userid:"donor7",password:"donor7",emailid:"donor7@gmail.com",bloodgroup:"AB-",usertype:"donor"});
+
+
+
+
+db.users.insertOne({userid:"donor11",password:"donor11",emailid:"donor11@gmail.com",bloodgroup:"A+",usertype:"donor"});
+db.users.insertOne({userid:"donor21",password:"donor21",emailid:"donor21@gmail.com",bloodgroup:"A-",usertype:"donor"});
+db.users.insertOne({userid:"donor31",password:"donor31",emailid:"donor31@gmail.com",bloodgroup:"B+",usertype:"donor"});
+db.users.insertOne({userid:"donor41",password:"donor41",emailid:"donor41@gmail.com",bloodgroup:"B-",usertype:"donor"});
+db.users.insertOne({userid:"donor51",password:"donor51",emailid:"donor51@gmail.com",bloodgroup:"O+",usertype:"donor"});
+db.users.insertOne({userid:"donor61",password:"donor61",emailid:"donor61@gmail.com",bloodgroup:"O-",usertype:"donor"});
+db.users.insertOne({userid:"donor71",password:"donor71",emailid:"donor71@gmail.com",bloodgroup:"AB-",usertype:"donor"});
+
+
+db.venues.insertOne({venueid:1,name:"American Red Cross of Greater Kansas"});
+db.venues.insertOne({venueid:2,name:"American Red Cross of South Central and Southeast Kansas"});
+db.venues.insertOne({venueid:3,name:"Red Cross Service Center at Fort Riley"});
+db.venues.insertOne({venueid:4,name:"Wichita Red Cross Blood and Platelet Donation Center"});
+db.venues.insertOne({venueid:5,name:"Hays Blood Donation Center"});
+db.venues.insertOne({venueid:6,name:"Salina Red Cross Blood and Platelet Donation Center"});
+
+
+db.eligibilityrequirements.insertOne({requirementid:1,description:"You should be in age group 18 to 65 years"});
+db.eligibilityrequirements.insertOne({requirementid:2,description:"Weight should not be less than 45 kgs"});
+db.eligibilityrequirements.insertOne({requirementid:3,description:"Temperature and Pulse should be normal"});
+db.eligibilityrequirements.insertOne({requirementid:4,description:"Haemoglobin should not be less than 12.5 gms"});
+db.eligibilityrequirements.insertOne({requirementid:5,description:"You should not have tattoo in the last one year"});
+db.eligibilityrequirements.insertOne({requirementid:6,description:"Blood pressure should be in normal limits"});

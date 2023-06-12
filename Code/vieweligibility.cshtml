@@ -1,0 +1,27 @@
+﻿@model IEnumerable<BloodDonation.classes.eligibilityrequirement>
+
+@{
+    ViewBag.Title = "vieweligibility";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    li
+    {
+        padding-top:8px;
+    }
+</style>
+
+<br /><br /><br />
+
+            <b><h3>Eligilbility Criterias are mentioned below:  </h3></b><br /><br />
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+                    @Html.DisplayFor(modelItem => item.description)
+                </li>
+        }
+    </ul>
+
+

@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "searchdonors";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    td
+    {
+        padding-left:20px;
+        padding-top:20px;
+    }
+</style>
+
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <td>
+                Select Blood Group:
+            </td>
+            <td>
+                <select name="bloodgroup" id="bloodgroup">
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="search Donor" /></td>
+        </tr>
+    </table>
+    
+}
+

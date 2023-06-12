@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "addneweligibility";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <style>
+        td {
+            padding-top: 10px;
+            padding-left: 10px;
+        }
+    </style>
+    <script type="text/javascript">
+        function check() {
+            if (document.getElementById("eligiblity").value == "") {
+                alert("Please enter the eligibility details");
+                return false;
+            }
+            return true;
+        }
+    </script>
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <td>Enter a new Eligiblity Requirement :</td>
+            <td><textarea rows="4" cols="30" name="eligiblity" id="eligiblity"></textarea></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="Add New Eligibility" onclick="return check()" /></td>
+        </tr>
+    </table>
+}
+

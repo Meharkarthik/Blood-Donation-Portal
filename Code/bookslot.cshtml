@@ -1,0 +1,61 @@
+﻿@model List<string>
+@{
+    ViewBag.Title = "bookslot";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    #form1 {
+        padding-top: 50px;
+    }
+
+    td {
+        padding-top: 20px;
+        padding-left: 5px;
+    }
+</style>
+<script type="text/javascript">
+
+
+    function check() {
+        var selecteddate = document.getElementById("bookingdate").value;
+        if (selecteddate == "") {
+            alert("Please enter the booking date");
+            return false;
+        }
+        return true;
+    }
+
+</script>
+@using (Html.BeginForm())
+{
+    <div id="form1">
+        <table>
+            <tr>
+                <td>Enter Booking Date: </td>
+                <td><input type="datetime-local" name="bookingdate" id="bookingdate" /></td>
+            </tr>
+            <tr>
+                <td>Select venue</td>
+                <td>
+                    <select name="venuename" id="venuename">
+                        @foreach (string venue in Model)
+                        {
+                            <option value="@venue">@venue</option>
+                        }
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="Book Slot" onclick="return check()" /></td>
+            </tr>
+        </table>
+    </div>
+}
+<div style="font-weight:bold;color:red">
+    @ViewBag.errormesg
+</div>
+<script type="text/javascript">
+    var today = new Date().toISOString().slice(0, 16);
+    document.getElementsByName("bookingdate")[0].min = today;
+    </script>
+

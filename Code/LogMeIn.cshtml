@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "LogMeIn";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script type="text/javascript">
+    function validate()
+    {
+        var name = document.getElementById("userid").value;
+        var pwd = document.getElementById("password").value;
+        if (name == "") {
+            alert("Please enter username");
+            return false;
+        }
+        else if (pwd == "")
+        {
+            alert("Please enter password");
+            return false;
+        }
+        return true;
+    }
+</script>
+<style>
+    td{
+        padding-left:5px;
+        padding-top:5px;
+    }
+</style>
+<br /><br /><br />
+@using(Html.BeginForm())
+{
+    <table>
+        <tr>
+            <td>Enter userID</td>
+            <td><input type="text" name="userid" id="userid" /></td>
+        </tr>
+        <tr>
+            <td>Enter password</td>
+            <td><input type="password" name="password" id="password" /></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="Login" onclick="return validate()" />
+            </td>
+        </tr>
+    </table>
+}
+<div style="color:red;font-weight:bold">
+    @ViewBag.error
+</div>
+

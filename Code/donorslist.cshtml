@@ -1,0 +1,29 @@
+﻿@model IEnumerable<BloodDonation.classes.user>
+
+@{
+    ViewBag.Title = "donorslist";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.userid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.emailid)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.userid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.emailid)
+        </td>
+    </tr>
+}
+
+</table>
